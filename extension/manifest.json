@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+    "name":"Step-by-Step Hint Extension",
+    "version":"1.0",
+    "description":"Provides progressive hints for coding problems using Gemini AI.",
+    
+      "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+
+    
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "host_permissions":[
+        "https://leetcode.com/*"
+    ],
+    "action":{
+        "default_popup": "popup.html",
+        "default_icon":"icon16.png"
+    },        
+    
+    "background":{
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://leetcode.com/*"],
+            "js": ["content.js"]
+        }
+    ]
+}

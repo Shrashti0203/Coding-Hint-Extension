@@ -1,0 +1,45 @@
+body{
+    font-family: Arial, sans-serif;
+    width: 300px;
+    padding: 12px;
+    background-color: #f5f5f5;
+}
+#hint-container{
+    min-height: 60px;
+    margin-bottom: 12px;
+    padding: 8px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    line-height: 1.4;
+    font-size: 13px;
+}
+
+#buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+}
+
+button{
+    margin: 4px 2px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+button:hover{
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
